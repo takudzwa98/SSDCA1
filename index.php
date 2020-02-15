@@ -39,7 +39,7 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-<title>Top Charts</title>
+<title>Your Music</title>
 <link rel="stylesheet" type="text/css" href="styles/main.scss">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 
@@ -48,7 +48,10 @@ $statement3->closeCursor();
 <body>
 <?php include './includes/header.php';?>
 <main>
-<h1>Genres</h1>
+<h4 className= "genre"></h4> 
+<h3 className= "genre">Playlists</h3>
+<break>
+
 <aside>
 <!-- display a list of categories in the sidebar-->
 
@@ -66,12 +69,13 @@ $statement3->closeCursor();
 <section>
 <!-- display a table of records from the database -->
 <h2><?php echo $category_name; ?></h2>
-<table>
+<table className = "table">
 <tr>
 <th>Album Art</th>
-<th>Album Chart</th>
-<th>Albums</th>
+<th>Song name</th>
+<th>Album</th>
 <th>Artist</th>
+<th>Release Date</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -81,6 +85,7 @@ $statement3->closeCursor();
 <td><?php echo $record['name']; ?></td>
 <td><?php echo $record['Albums']; ?></td>
 <td><?php echo $record['artist']; ?></td>
+<td><?php echo $record['releasedate']; ?></td>
 
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
