@@ -3,7 +3,7 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $Albums = filter_input(INPUT_POST, 'Albums');
 $name = filter_input(INPUT_POST, 'name');
-$artist = filter_input(INPUT_POST, 'price');
+$artist = filter_input(INPUT_POST, 'artist');
 // Validate inputs
 if ($category_id == null || $category_id == false ||
         $Albums == null || $name == null || $artist == null || $artist == false) {
