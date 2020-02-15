@@ -39,7 +39,7 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-<title>PHP CRUD</title>
+<title>Top Charts</title>
 <link rel="stylesheet" type="text/css" href="styles/main.scss">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 
@@ -51,7 +51,7 @@ $statement3->closeCursor();
 <h1>Genres</h1>
 <aside>
 <!-- display a list of categories in the sidebar-->
-<h2>Home</h2>
+
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -72,7 +72,6 @@ $statement3->closeCursor();
 <th>Album Chart</th>
 <th>Albums</th>
 <th>Artist</th>
-<th>Price</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -81,8 +80,8 @@ $statement3->closeCursor();
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
 <td><?php echo $record['Albums']; ?></td>
-<td><?php echo $record['Artist']; ?></td>
-<td><?php echo $record['price']; ?></td>
+<td><?php echo $record['artist']; ?></td>
+
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"

@@ -3,10 +3,10 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $Albums = filter_input(INPUT_POST, 'Albums');
 $name = filter_input(INPUT_POST, 'name');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$artist = filter_input(INPUT_POST, 'price');
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-        $Albums == null || $name == null || $price == null || $price == false) {
+        $Albums == null || $name == null || $artist == null || $artist == false) {
     $error = "Invalid data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -54,14 +54,14 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO records
-                 (categoryID, Albums, name, price, image)
+                 (categoryID, Albums, name, artist, image)
               VALUES
-                 (:category_id, :Albums, :name, :price, :image)";
+                 (:category_id, :Albums, :name, :artist, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':Albums', $Albums);
     $statement->bindValue(':name', $name);
-    $statement->bindValue(':price', $price);
+    $statement->bindValue(':artist', $artist);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();

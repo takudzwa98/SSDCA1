@@ -4,11 +4,11 @@ $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $Albums = filter_input(INPUT_POST, 'Albums');
 $name = filter_input(INPUT_POST, 'name');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$artist = filter_input(INPUT_POST, 'artist');
 // Validate inputs
 if ($record_id == NULL || $record_id == FALSE || $category_id == NULL ||
-$category_id == FALSE || empty($Albums) || empty($name) ||
-$price == NULL || $price == FALSE) {
+$category_id == FALSE || empty($Albums) || empty($name) || empty($artist) ||
+ $artist == FALSE) {
 $error = "Invalid data. Check all fields and try again.";
 include('error.php');
 } else {
@@ -46,14 +46,14 @@ $query = 'UPDATE records
 SET categoryID = :category_id,
 Albums = :Albums,
 name = :name,
-price = :price,
+artist = :artist,
 image = :image
 WHERE recordID = :record_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':category_id', $category_id);
 $statement->bindValue(':Albums', $Albums);
 $statement->bindValue(':name', $name);
-$statement->bindValue(':price', $price);
+$statement->bindValue(':artist', $artist);
 $statement->bindValue(':image', $image);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();
