@@ -12,15 +12,15 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
+    <title>Add a song</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Your Music</h1></header>
 
     <main>
-        <h1>Add Record</h1>
+        <h1>Add a Song</h1>
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
             <label>Category:</label>
@@ -43,6 +43,10 @@ $statement->closeCursor();
 
             <label>Artist:</label>
             <input type="input" name="artist">
+            <br>
+
+            <label>Release Date:</label>
+            <input type="input" name="releasedate">
             <br>
 
             <label>Image:</label>

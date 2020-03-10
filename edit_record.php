@@ -5,10 +5,11 @@ $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $Albums = filter_input(INPUT_POST, 'Albums');
 $name = filter_input(INPUT_POST, 'name');
 $artist = filter_input(INPUT_POST, 'artist');
+$releasedate = filter_input(INPUT_POST, 'releasedate');
 // Validate inputs
 if ($record_id == NULL || $record_id == FALSE || $category_id == NULL ||
-$category_id == FALSE || empty($Albums) || empty($name) || empty($artist) ||
- $artist == FALSE) {
+$category_id == FALSE || empty($Albums) || empty($name) || empty($artist) || empty($releasedate) ||
+ $releasedate == FALSE) {
 $error = "Invalid data. Check all fields and try again.";
 include('error.php');
 } else {
@@ -47,6 +48,7 @@ SET categoryID = :category_id,
 Albums = :Albums,
 name = :name,
 artist = :artist,
+releasedate = :releasedate,
 image = :image
 WHERE recordID = :record_id';
 $statement = $db->prepare($query);
@@ -54,6 +56,7 @@ $statement->bindValue(':category_id', $category_id);
 $statement->bindValue(':Albums', $Albums);
 $statement->bindValue(':name', $name);
 $statement->bindValue(':artist', $artist);
+$statement->bindValue(':releasedate', $releasedate);
 $statement->bindValue(':image', $image);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();

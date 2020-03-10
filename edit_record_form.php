@@ -43,6 +43,10 @@ $statement->closeCursor();
             <input type="input" name="artist"
                    value="<?php echo $record['artist']; ?>">
             <br>
+            <label>Release Date:</label>
+            <input type="input" name="releasedate"
+                   value="<?php echo $record['releasedate']; ?>">
+            <br>
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>

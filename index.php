@@ -71,7 +71,7 @@ $statement3->closeCursor();
 <h2><?php echo $category_name; ?></h2>
 <table className = "table">
 <tr>
-<th>Album Art</th>
+<th>Song Art</th>
 <th>Song name</th>
 <th>Album</th>
 <th>Artist</th>
@@ -106,8 +106,8 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Edit Categories</a></p>
+<p><a href="add_record_form.php">Add Your Own Playlist</a></p>
+<p><a href="category_list.php">Edit Your Playlist</a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>

@@ -4,9 +4,10 @@ $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $Albums = filter_input(INPUT_POST, 'Albums');
 $name = filter_input(INPUT_POST, 'name');
 $artist = filter_input(INPUT_POST, 'artist');
+$releasedate = filter_input(INPUT_POST, 'releasedate');
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-        $Albums == null || $name == null || $artist == null || $artist == false) {
+        $Albums == null || $name == null || $artist == null ||  $releasedate == null || $releasedate == false) {
     $error = "Invalid data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -54,15 +55,16 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO records
-                 (categoryID, Albums, name, artist, image)
+                 (categoryID, Albums, name, artist, image, releasedate)
               VALUES
-                 (:category_id, :Albums, :name, :artist, :image)";
+                 (:category_id, :Albums, :name, :artist, :image, :releasedate)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':Albums', $Albums);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':artist', $artist);
     $statement->bindValue(':image', $image);
+    $statement->bindValue(':releasedate', $releasedate);
     $statement->execute();
     $statement->closeCursor();
 // Display the records List page
