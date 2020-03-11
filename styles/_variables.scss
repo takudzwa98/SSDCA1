@@ -3,6 +3,9 @@ $font-style: oblique;
 $white-color: white;
 $text-color: black;
 $button-backhround:white;
+$text-align:center;
+$border-type:sold 1px;
+$border-radius: 10px;
 /* the styles for the html elements */
 html {
     background-color:black
@@ -26,7 +29,7 @@ html {
   body
    {
     margin-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-style;
     width: 1000px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.959);
@@ -264,7 +267,7 @@ html {
     background-color: black;
     width: 15%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: $border-radius;
     font-style: $font-style;
   }
   #addSongHeader
@@ -275,7 +278,7 @@ html {
     background-color: black;
     width: 30%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: $border-radius;
     font-style: $font-style;
     text-align: center;
   }

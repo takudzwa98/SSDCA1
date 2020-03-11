@@ -39,7 +39,7 @@ $statement->closeCursor();
             <input type="input" name="Albums"
                    value="<?php echo $record['Albums']; ?>">
             <br>
-            <label>Name:</label>
+            <label>Song Name:</label>
             <input type="input" name="name"
                    value="<?php echo $record['name']; ?>">
             <br>

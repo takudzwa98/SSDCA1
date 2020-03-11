@@ -109,7 +109,7 @@ value="<?php echo $record['categoryID']; ?>">
 <?php endforeach; ?>
 </table>
 <p><a className= "addSong" href="add_record_form.php">Add a Song</a></p>
-<p><a href="category_list.php">Edit Your Song</a></p>
+<p><a href="category_list.php">Add/Delete PlayList</a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>
