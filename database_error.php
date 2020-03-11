@@ -3,6 +3,8 @@
 <!-- the head section -->
 <head>
     <title>My PHP CRUD application</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.scss">
+<link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->

@@ -9,6 +9,16 @@ html {
 
 table {
   background-color: white;
+  border: 50px solid black;
+  border-collapse: collapse;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 20;
+  border-radius: 5px;
+  border-bottom: 10px;
+}
+
+table, th, td {
+  border: 10px solid black;
 }
 
 body {
@@ -35,7 +45,7 @@ header h1 {
   border-bottom: 10px;
   border-top: 10px;
   border-style: solid;
-  font-family: monospace;
+  font-family: oblique;
   font-size: 30px;
   background-color: white;
   border-radius: 10px;
@@ -85,7 +95,7 @@ h3 {
   border-style: solid;
   width: 12.5%;
   height: 25px;
-  font-style: monospace;
+  font-style: oblique;
   color: black;
   background-color: white;
   border-color: black;
@@ -177,5 +187,100 @@ br {
 
 #add_record_form input[text] {
   width: 15em;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.addSong {
+  font-size: 30px;
+  color: white;
+}
+
+a {
+  font-size: 15px;
+  color: black;
+  border: solid 1px;
+  font-style: oblique;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+input {
+  background-color: white;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3a3939;
+}
+
+#addPlaylistHeaders {
+  color: white;
+  border: solid 1px;
+  border-color: white;
+  background-color: black;
+  width: 15%;
+  text-align: center;
+  border-radius: 10px;
+  font-style: oblique;
+}
+
+#addSongHeader {
+  color: white;
+  border: solid 1px;
+  border-color: white;
+  background-color: black;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  font-style: oblique;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

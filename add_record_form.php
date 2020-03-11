@@ -14,16 +14,18 @@ $statement->closeCursor();
 <head>
     <title>Add a song</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
     <header><h1>Your Music</h1></header>
 
     <main>
-        <h1>Add a Song</h1>
+        <center><h1 id="addSongHeader">Add a Song</h1></center>
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
-            <label>Category:</label>
+            <label>Playlist:</label>
             <select name="category_id">
             <?php foreach ($categories as $category) : ?>
                 <option value="<?php echo $category['categoryID']; ?>">

@@ -50,6 +50,8 @@ $statement3->closeCursor();
 <main>
 <h4 className= "genre"></h4> 
 <h3 className= "genre">Playlists</h3>
+
+<br>
 <break>
 
 <aside>
@@ -106,8 +108,8 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Your Own Playlist</a></p>
-<p><a href="category_list.php">Edit Your Playlist</a></p>
+<p><a className= "addSong" href="add_record_form.php">Add a Song</a></p>
+<p><a href="category_list.php">Edit Your Song</a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>

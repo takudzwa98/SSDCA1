@@ -14,14 +14,18 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
+    <title>Your Music</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.scss">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Your Music</h1></header>
+    
     <main>
-        <h1>Edit record</h1>
+           
+        <center><h1>Edit Your Song</h1></center>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
             <input type="hidden" name="original_image" value="<?php echo $record['image']; ?>" />
