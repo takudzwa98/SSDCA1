@@ -1,4 +1,5 @@
 <?php
+
 // Connect to the database
 require_once('database.php');
 // Set the default category to the ID of 1
@@ -78,8 +79,7 @@ $statement3->closeCursor();
 <th>Album</th>
 <th>Artist</th>
 <th>Release Date</th>
-<th>Delete</th>
-<th>Edit</th>
+
 </tr>
 <?php foreach ($records as $record) : ?>
 <tr>
@@ -89,27 +89,14 @@ $statement3->closeCursor();
 <td><?php echo $record['artist']; ?></td>
 <td><?php echo $record['releasedate']; ?></td>
 
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
+
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a className= "addSong" href="add_record_form.php">Add a Song</a></p>
-<p><a href="category_list.php">Add/Delete PlayList</a></p>
+<p><a href="logout.php"> Log out<a/a></p>
+<p><a href="login.php"> Log in<a/a></p>
+<p><a href="register.php"> register<a/a></p>
+<p><a href="manage_songs.php"> Manager Songs<a/a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>
