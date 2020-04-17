@@ -108,6 +108,7 @@ if(isset($_POST['register'])){
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles_2/main.css">
         <title>Register</title>
     </head>
     <body>
