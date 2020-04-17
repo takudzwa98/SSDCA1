@@ -113,16 +113,51 @@ if(isset($_POST['register'])){
     </head>
     <body>
         <h1>Register</h1>
-        <form action="register.php" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
-            <label for="emailadress">emailadress</label>
-            <input type="text" id="emailadress" name="emailadress"><br>
-            <input type="submit" name="register" value="Register">
-            echo '<p><a href="javascript:history.go(-1)"title="Return to previous page">&laquo;Go back</a></p>';
-            </button>
+    
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
+
+<div id="id02" class="modal">
+
+<form class="modal-content animate" action="register.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="hi.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      
+     <label for="emailadress"><b>Email Adress</b></label>
+    <input type="text" placeholder="Enter Email Address" name="emailadress" required>
+
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit" name="register" value="Register">Register</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+  
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
         </form>
+
+        
     </body>
 </html>

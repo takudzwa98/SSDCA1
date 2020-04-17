@@ -42,6 +42,7 @@ $statement3->closeCursor();
 <head>
 <title>Your Music</title>
 <link rel="stylesheet" type="text/css" href="styles/main.scss">
+<link rel="stylesheet" type="text/css" href="styles_2/main.scss">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 
 </head>
@@ -93,12 +94,53 @@ $statement3->closeCursor();
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="logout.php"> Log out<a/a></p>
-<p><a href="login.php"> Log in<a/a></p>
-<p><a href="register.php"> register<a/a></p>
-<p><a href="manage_songs.php"> Manager Songs<a/a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+<form class="modal-content animate" action="login.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="hi.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      
+     <label for="emailadress"><b>Email Adress</b></label>
+    <input type="text" placeholder="Enter Email Address" name="emailadress" required>
+
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit" name="login" >Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
