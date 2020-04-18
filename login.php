@@ -97,62 +97,44 @@ if(isset($_POST['login'])){
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles_2/main.css">
+        <link rel="stylesheet" href="styles_2/register.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Login</title>
     </head>
     <body>
     <?php include './includes/header2.php';?>
-        <h1>Login</h1>
-
-
+     
+        <br>
+        <br>
+        <br>
+        <form action="login.php" style="max-width:500px;margin:auto" method="post">
+ 
   
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-<div id="id01" class="modal">
-  
-<form class="modal-content animate" action="login.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
 
-    <div class="container">
-      
-     <label for="emailadress"><b>Email Adress</b></label>
-    <input type="text" placeholder="Enter Email Address" name="emailadress" required>
 
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
+ <div class="input-container">
+     <i class="fa fa-user icon"></i>
+     <input class="input-field" type="text" placeholder="Username" name="username">
+   </div>
+ 
+   <div class="input-container">
+     <i class="fa fa-envelope icon"></i>
+     <input class="input-field" type="text" placeholder="Email Address" name="emailadress">
+   </div>
+   
+   <div class="input-container">
+     <i class="fa fa-key icon"></i>
+     <input class="input-field" type="password" placeholder="Password" name="password">
+ 
+ </div>
 
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-        
-      <button type="submit" name="login" >Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-    </body>
-    <?php include './includes/footer.php';?>
-</html>
+ <button type="submit" class="btn" name="login" >Log In</button>
+   </div>
+   
+ 
+ 
+     </body>
+     <?php include './includes/footer.php';?>
+ </html>

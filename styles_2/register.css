@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.input-container {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: black;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+header h1 {
+  margin: 0;
+  padding: .5em 0;
+  text-align: center;
+  color: #0e0d0d;
+  border-radius: 5px;
+  border-bottom: 10px;
+  border-top: 10px;
+  border-style: solid;
+  font-family: oblique;
+  font-size: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+header {
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+/*# sourceMappingURL=register.css.map */

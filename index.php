@@ -40,14 +40,29 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
+  
 <title>Your Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="styles/main.scss">
 <link rel="stylesheet" type="text/css" href="styles_2/main.scss">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
-
+<link rel="stylesheet" type="text/css" href="styles/css.css">
 </head>
-<!-- the body section -->
+
 <body>
+<div class="navbar">
+  <a class="active" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <i onclick="document.getElementById('id01').style.display='block'" style="width:auto;></i> Search</a> 
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <a href="register.php"><i class="fa fa-fw fa-envelope"></i> Register</a> 
+  <a href="#">
+    
+    
+  <i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+<br>
+<br>
 <?php include './includes/header.php';?>
 <main>
 <h4 className= "genre"></h4> 
@@ -96,9 +111,9 @@ $statement3->closeCursor();
 </table>
 </section>
 </main>
+
 <?php include './includes/footer.php';?>
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
 <div id="id01" class="modal">
   
 <form class="modal-content animate" action="login.php" method="post">
@@ -142,5 +157,9 @@ window.onclick = function(event) {
     }
 }
 </script>
+<form action="register.php">
+<button class="w3-button w3-black">Register</button>
+</form>
+
 </body>
 </html>

@@ -60,12 +60,23 @@ $statement3->closeCursor();
 <!-- the head section -->
 <head>
 <title>Your Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="styles/main.scss">
+<link rel="stylesheet" type="text/css" href="styles_2/main.scss">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
+<link rel="stylesheet" type="text/css" href="styles/css.css">
 
 </head>
 <!-- the body section -->
 <body>
+<div class="navbar">
+  <a class="manage_songs.php" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="logout.php"><i class="fa fa-fw fa-user"></i> Log Out</a> 
+ 
+</div>
+<br>
+<br>
 <?php include './includes/header.php';?>
 <main>
 <h4 className= "genre"></h4> 
@@ -130,9 +141,6 @@ value="<?php echo $record['categoryID']; ?>">
 </table>
 <p><a className= "addSong" href="add_record_form.php">Add a Song</a></p>
 <p><a href="category_list.php">Add/Delete PlayList</a></p>
-<p><a href="logout.php"> Log out<a/a></p>
-<p><a href="login.php"> Log in<a/a></p>
-<p><a href="register.php"> register<a/a></p>
 </section>
 </main>
 <?php include './includes/footer.php';?>

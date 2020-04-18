@@ -72,7 +72,7 @@ if(isset($_POST['register'])){
     if($row['num'] > 0){
         
         die('That email adress already exists!');
-        echo '<p><a href="javascript:history.go(-1)"title="Return to previous page">&laquo;Go back</a></p>';
+       
         
     }
     
@@ -108,56 +108,45 @@ if(isset($_POST['register'])){
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles_2/main.css">
+        <link rel="stylesheet" href="styles_2/register.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Register</title>
     </head>
     <body>
-        <h1>Register</h1>
-    
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
-
-<div id="id02" class="modal">
-
-<form class="modal-content animate" action="register.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="hi.jpg" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      
-     <label for="emailadress"><b>Email Adress</b></label>
-    <input type="text" placeholder="Enter Email Address" name="emailadress" required>
-
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
-
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
+    <?php include './includes/header3.php';?>
         
-      <button type="submit" name="register" value="Register">Register</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
 
+<br>
+<br>
+<br>
+<form action="register.php" style="max-width:500px;margin:auto" method="post">
+ 
   
-  </form>
+
+
+
+<div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="username">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email Address" name="emailadress">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="password">
+
 </div>
+   <button type="submit" class="btn" name="register" value="Register">Register</button>
+ 
+  </div>
+  
 
-<script>
-// Get the modal
-var modal = document.getElementById('id02');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-        </form>
-
-        
     </body>
+    <?php include './includes/footer.php';?>
 </html>
