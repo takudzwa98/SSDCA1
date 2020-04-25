@@ -135,6 +135,7 @@ if(isset($_POST['login'])){
  <button type="submit" class="btn" name="login" >Log In</button>
    </div>
    
+   <button><a href="index.php" class="" >Home</a></button>
  
  
      </body>

@@ -71,7 +71,7 @@ if(isset($_POST['register'])){
     //the scope of this tutorial.
     if($row['num'] > 0){
         
-        die('That email adress already exists!');
+        header('Location: registeremail.php');
        
         
     }
@@ -97,7 +97,7 @@ if(isset($_POST['register'])){
      
         
         header('Location: login.php');
-        echo 'Thank you for registering with our website.';
+       
 
     }
     
@@ -125,7 +125,7 @@ if(isset($_POST['register'])){
   
 
 
-
+<p>Email Address Already exists<p>
 <div class="input-container">
     <i class="fa fa-user icon"></i>
     <input class="input-field" type="text" pattern ="^[a-z0-9_-]{3,15}$" title="Min 3 characters,Max characters of 15" placeholder="Username" name="username">

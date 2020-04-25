@@ -51,7 +51,7 @@ if(isset($_POST['register'])){
     //I'm just going to kill the script completely, as error handling is outside
     //the scope of this tutorial.
     if($row['num'] > 0){
-        header('Location: registerfail.php');
+        die('That username already exists!');
     }
     $sql = "SELECT COUNT(emailadress) AS num FROM users WHERE emailadress = :emailadress";
     $stmt = $pdo->prepare($sql);
@@ -125,7 +125,7 @@ if(isset($_POST['register'])){
   
 
 
-
+<p>Username/Email Already Exists <p>
 <div class="input-container">
     <i class="fa fa-user icon"></i>
     <input class="input-field" type="text" pattern ="^[a-z0-9_-]{3,15}$" title="Min 3 characters,Max characters of 15" placeholder="Username" name="username">

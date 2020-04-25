@@ -4,7 +4,8 @@ h1{
     color: $base-color;
 }
 body{
-    background: red;
+    background: $background;
+    font-style: $font-style;
 }
 
 
@@ -21,15 +22,18 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-style: $font-style;
 }
 header {
   margin: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $background;
+  font-style: $font-style;
 }
 footer {
   clear: both;
   margin-top: 1em;
-  border-top: 2px solid black;
+  border-top: 2px solid $background;
+  font-style: $font-style;
 }
 
 footer p {
@@ -41,7 +45,7 @@ header h1 {
   margin: 0;
   padding: .5em 0;
   text-align: center;
-  color: rgb(14, 13, 13);
+  color:$background;
   border-radius: 5px;
   border-bottom: 10px;
   border-top: 10px;
@@ -49,18 +53,20 @@ header h1 {
   font-family: $font-style;
   font-size: 30px;
   background-color: $white-color;
+  font-style: $font-style;
   border-radius: 10px;
 }
 
 button {
   background-color: white;
-  color:black;
+  color:$background;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
    text-align: center;
    border-style: solid;
+   font-style: $font-style;
 
 }
 
@@ -74,7 +80,8 @@ button:hover {
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: black;
+  background-color:$background;
+  font-style: $font-style;
   color: white;
 }
 
@@ -94,7 +101,7 @@ img.avatar {
 
 .container {
   padding: 16px;
-  background-color: black;
+  background-color: $background;
 }
 
 span.psw {
@@ -181,4 +188,5 @@ span.psw {
 }
 h1{
   color: red;
+  font-style: $font-style;
 }

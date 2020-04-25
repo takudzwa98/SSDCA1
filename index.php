@@ -113,7 +113,7 @@ $statement3->closeCursor();
 </main>
 
 <?php include './includes/footer.php';?>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
 <div id="id01" class="modal">
   
 <form class="modal-content animate" action="login.php" method="post">
@@ -141,7 +141,7 @@ $statement3->closeCursor();
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+     
     </div>
   </form>
 </div>
@@ -157,8 +157,7 @@ window.onclick = function(event) {
     }
 }
 </script>
-<form action="register.php">
-<button class="w3-button w3-black">Register</button>
+
 </form>
 
 </body>

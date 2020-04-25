@@ -48,7 +48,8 @@ if(isset($_POST['login'])){
         //Could not find a user with that username!
         //PS: You might want to handle this error in a more user-friendly manner!
         echo "Incorrect password";
-        header('Location: loginfailed.php');
+        header('Location: loginfailed
+        .php');
         
     } 
     else
@@ -134,9 +135,12 @@ if(isset($_POST['login'])){
 
  <button type="submit" class="btn" name="login" >Log In</button>
    </div>
-   
+   <button><a href="index.php" class="" >Home</a></button>
+   <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
  
- 
+
      </body>
      <?php include './includes/footer.php';?>
  </html>
