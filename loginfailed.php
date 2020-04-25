@@ -48,7 +48,7 @@ if(isset($_POST['login'])){
         //Could not find a user with that username!
         //PS: You might want to handle this error in a more user-friendly manner!
         echo "Incorrect password";
-        header('Location: loginfailed.php');
+        header('Location: login.php');
         
     } 
     else
@@ -115,7 +115,7 @@ if(isset($_POST['login'])){
   
 
 
-
+<p>Incorrect Username/Password/Email Combination <p>
  <div class="input-container">
      <i class="fa fa-user icon"></i>
      <input class="input-field" type="text" placeholder="Username" name="username">

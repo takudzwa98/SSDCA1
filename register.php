@@ -145,7 +145,7 @@ if(isset($_POST['register'])){
  
   </div>
   
-
+  <button><a href="index.php" class="" >Home</a></button>
 
     </body>
     <?php include './includes/footer.php';?>
