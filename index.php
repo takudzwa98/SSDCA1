@@ -54,7 +54,7 @@ $statement3->closeCursor();
 <div class="navbar">
   <a class="active" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a> 
   <i onclick="document.getElementById('id01').style.display='block'" style="width:auto;></i> Search</a> 
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></button>
   <a href="register.php"><i class="fa fa-fw fa-envelope"></i> Register</a> 
   <a href="#">
     

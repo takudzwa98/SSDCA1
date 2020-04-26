@@ -4,7 +4,8 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: black;
+  background-color: #d1cbcb;
+  border-radius: 20px;
   overflow: auto;
 }
 

@@ -118,17 +118,17 @@ if(isset($_POST['login'])){
 <p>Incorrect Username/Password/Email Combination <p>
  <div class="input-container">
      <i class="fa fa-user icon"></i>
-     <input class="input-field" type="text" placeholder="Username" name="username">
+     <input class="input-field" type="text" placeholder="Username" name="username"  required>
    </div>
  
    <div class="input-container">
      <i class="fa fa-envelope icon"></i>
-     <input class="input-field" type="text" placeholder="Email Address" name="emailadress">
+     <input class="input-field" type="text" placeholder="Email Address" name="emailadress"  required>
    </div>
    
    <div class="input-container">
      <i class="fa fa-key icon"></i>
-     <input class="input-field" type="password" placeholder="Password" name="password">
+     <input class="input-field" type="password" placeholder="Password" name="password"  required>
  
  </div>
 

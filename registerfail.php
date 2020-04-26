@@ -125,20 +125,20 @@ if(isset($_POST['register'])){
   
 
 
-<p>Username/Email Already Exists <p>
+<p>Username <p>
 <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" pattern ="^[a-z0-9_-]{3,15}$" title="Min 3 characters,Max characters of 15" placeholder="Username" name="username">
+    <input class="input-field" type="text" pattern ="^[a-z0-9_-]{3,15}$" title="Min 3 characters,Max characters of 15" placeholder="Username" name="username" required>
   </div>
 
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Please enter a valid email address." placeholder="Email Address" name="emailadress">
+    <input class="input-field" type="text" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Please enter a valid email address." placeholder="Email Address" name="emailadress"  required>
   </div>
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" name="password">
+    <input class="input-field" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" name="password"  required>
 
 </div>
    <button type="submit" class="btn" name="register" value="Register">Register</button>
